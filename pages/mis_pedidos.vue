@@ -1,37 +1,52 @@
 <template>
-    <div class="container">
-        <nav class="navbar navbar-light bg-light">
-            <h1 class="navbar-brand" href="#">
-                Mis Pedidos
-            </h1>
-        </nav>
-        <table class="table table-striped">
-            <thead>
-                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Pedido</th>
-                    <th scope="col">Receptor</th>
-                    <th scope="col">Telefono</th>
-                    <th scope="col">Fecha Entrega</th>
-                    <th scope="col">Estado</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr v-for="pedido in pedidos" :key="pedido.id">
-                    <td>{{pedido.id}}</td>
-                    <td>{{pedido.id}}</td>
-                    <td>{{pedido.direccionEntrega}}</td>
-                    <td>{{pedido.telefonoEntrega}}</td>
-                    <td>{{pedido.fechaentrega}}</td>
-                    <td>{{pedido.estado}}</td>
-                    
-                </tr>
-            </tbody>
+    <div>
+        <Header/>
+        <br>
+        <div class="container">
+            <div class="titlezone">
+                <form>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <label class = "lWhite"></label>
+                        </div>
+                        <div class="col-lg-4">
+                        <input type="text" class="form-control" placeholder="Código de pedido">
+                        
+                        </div>
+                    </div>
+                </form>
+            </div>
+               
+                <br>
+                <table class="table table-striped table-responsive-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Pedido</th>
+                            <th scope="col">Receptor</th>
+                            <th scope="col">Telefono</th>
+                            <th scope="col">Fecha Entrega</th>
+                            <th scope="col">Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="pedido in pedidos" :key="pedido.id">
+                            <td>{{pedido.id}}</td>
+                            <td>{{pedido.id}}</td>
+                            <td>{{pedido.direccionEntrega}}</td>
+                            <td>{{pedido.telefonoEntrega}}</td>
+                            <td>{{pedido.fechaentrega}}</td>
+                            <td>{{pedido.estado}}</td>
+                            
+                        </tr>
+                    </tbody>
 
-        </table>
+                </table>
 
-      
+            
+            </div>
     </div>
+    
 </template>
 <script>
  import axios from 'axios'
@@ -60,3 +75,13 @@
   }
 
 </script>
+<style >
+.titlezone{
+    background: #0070b8;
+    padding: 10pt;
+}
+.lWhite{
+    color:white;
+    font-size: medium;
+}
+</style>

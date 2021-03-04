@@ -8,6 +8,7 @@
                 <li><nuxt-link to="/mis_pedidos">Mis Pedidos</nuxt-link></li>
                 <li><nuxt-link to="/pedido">Pedido</nuxt-link></li>
                 <li><nuxt-link to="/perfil">Perfil</nuxt-link></li>
+                <li><nuxt-link to="/inicio">Inicio</nuxt-link></li>
             </ul>
         </div>
        
@@ -27,7 +28,6 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  font-family: 'Josefin Sans', sans-serif;
 }
 
 body{
@@ -42,7 +42,7 @@ body{
 .wrapper .sidebar{
   width: 200px;
   height: 100%;
-  background: #4b4276;
+  background: #37c2ec;
   padding: 30px 0px;
   position: fixed;
 }
@@ -62,7 +62,7 @@ body{
 }    
 
 .wrapper .sidebar ul li a{
-  color: #bdb8d7;
+  color: #ffffff;
   display: block;
 }
 
@@ -71,7 +71,7 @@ body{
 }
 
 .wrapper .sidebar ul li:hover{
-  background-color: #594f8d;
+  background-color: #edf2f3;
 }
     
 .wrapper .sidebar ul li:hover a{

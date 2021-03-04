@@ -1,43 +1,40 @@
 <template>
-     <div class="fixed-header">
-        <div class="container">
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Products</a>
-                <a href="#">Services</a>
-                <a href="#">Contact Us</a>
+     <div>    
+            <nav class = "navbar navbar-light barColor navbar-expand-sm">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                        <a class="navbar-brand" href="#">Moover</a>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" ><nuxt-link to="/mis_pedidos">Mis Pedidos</nuxt-link></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" > <nuxt-link to="/nosotros">Nosotros</nuxt-link></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" > <nuxt-link to="/contacto">Contacto</nuxt-link></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                    
+                    
+               
             </nav>
-        </div>
+    
     </div> 
 </template>
+<script>
 
+</script>
 <style>
-    body{        
-        padding-top: 60px;
-        padding-bottom: 40px;
-    }
-    .fixed-header, .fixed-footer{
-        width: 100%;
-        position: fixed;        
-        background: #333;
-        padding: 10px 0;
-        color: #fff;
-    }
-    .fixed-header{
-        top: 0;
-    }
-    .fixed-footer{
-        bottom: 0;
-    }
-    .container{
-        width: 80%;
-        margin: 0 auto; /* Center the DIV horizontally */
-    }
-    nav a{
-        color: #fff;
-        text-decoration: none;
-        padding: 7px 25px;
-        display: inline-block;
-    }
+.barColor{
+    background: #e3f2fd;
+}
+
 </style>
+
