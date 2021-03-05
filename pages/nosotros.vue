@@ -1,18 +1,18 @@
 <template>
     <div>
-            <nav class = "navbar navbar-light barColor navbar-expand-sm">
+            <nav class = "navbar navbar-light navColor navbar-expand-sm">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                        <a class="navbar-brand" href="#">Moover</a>
+                        <a class="navbar-brand" href="#"><nuxt-link to="/">Moover</nuxt-link></a>
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link navLink" aria-current="page" >Yo Repartidor</a>
+                                <a class="nav-link navLink" aria-current="page" ><nuxt-link to="/"> Yo Repartidor</nuxt-link></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link navLink" > Yo Empresa</a>
+                                <a class="nav-link navLink" ><nuxt-link to="/"> Yo Empresa</nuxt-link></a>
                             </li>
                         </ul>
                     </div>
@@ -23,18 +23,20 @@
                
             </nav>
         <div id = "fondo">
-            <div class="content-inicio" >
-                <div class="about-section">
-                    <h1>Moover</h1>
-                    <p>Somos una empresa dedicada a simplificarte la vida.</p>
-                    <p>Tienes un pedido, necesitas movilidad, nosotros la tenemos de forma inmediata</p>
-                    <p>Moover...Cuando quieras, donde quieras</p>
-                </div>
-                
-
+            <div class="contents-inicio">
+                <h1 class="title-inicio">Moover</h1>
+                <p class="us-inicio">Quieres un envio rapido y seguro, nos dedicamos a hacerte la vida facil</p>
+                <p class="us-inicio">Donque quieras, cuando quieras</p>
+                <br>
+                <br>
+                <button type="button" class="btn btn-info">Haz una entrega ya!</button>
+                <br>
+                <br>
+                <button type="button" class="btn btn-success">Registrate</button>
 
 
             </div>
+            
         </div>
         
     </div>
@@ -49,18 +51,28 @@
     width: 100%;
     min-width: 320px;
     height: 100vh;
-    background-image: linear-gradient(rgb(246,245,245, 0.5),rgb(246,245,245,.5)),url(http://www.commercebloom.com/wp-content/uploads/2018/02/AdobeStock_93938728-1200x800.jpeg);
+    background-image: linear-gradient(rgba(196, 192, 192, 0.5),rgba(189, 187, 187, 0.5)),url(http://gislinc.com/wp-content/uploads/2015/04/parcel-00.jpg);
     background-position: 50%;
     background-size: cover;
     background-repeat: no-repeat;
 }
-h1{
+.title-inicio{
     color:#1f3c88;
+    font-weight: 900;
+    font-size: 300%;
+}
+.us-inicio{
+    font-weight: bold;
+    font-size: 110%
 }
 
 a{
     color: white;
     font-weight: bold;
+    
+}
+a:hover {
+    color:white;
 }
 .content-inicio{
       background:#f6f5f5 ;
@@ -78,9 +90,19 @@ a{
   margin-bottom: 10%;
 }
 
+.contents-inicio{
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0% auto;
+  margin-top: 9%;
+  margin-bottom: 10%;
+  
+}
 
 
-.barColor{
+.navColor{
     background: #1f3c88;
 }
 

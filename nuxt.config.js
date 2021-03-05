@@ -12,12 +12,14 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@/assets/css/bootstrap.css'
+    '@/assets/css/bootstrap.css',
+    '@fortawesome/fontawesome-svg-core/styles.css'
   ],
   js:[
     '@/assets/js/bootstrap.min.js'
@@ -25,6 +27,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/fontawesome.js',
+
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -40,10 +44,15 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
-    '@nuxtjs/axios'
+    'nuxt-fontawesome',
+    '@nuxtjs/axios',
+    '@nuxt/http'
+    
   ],
   
-
+  bootstrapVue: {
+    icons: true
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }

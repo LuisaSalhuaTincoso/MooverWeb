@@ -9,7 +9,7 @@
         </h2>
         <div class="row">
           <div class="col-md-6 mb-md-0 mb-5">
-            <p class="h2-responsive  text-left my-3">Detalles Recojo</p>
+            <p class="h2-responsive  text-left  font-weight-bold my-3">Detalles Recojo</p>
             <form name="pedido-form">
               <div class="row">
                 <div class="col-md-6">
@@ -19,7 +19,7 @@
                       id="name"
                       name="name"
                       class="form-control"
-                      :value="post.razonSocial"
+                      :value="post.nombreEmisor"
                     />
                     <label for="name" class="">Nombre Emisor </label>
                   </div>
@@ -32,7 +32,7 @@
                       id="email"
                       name="email"
                       class="form-control"
-                      :value="post.correo"
+                      :value="post.telefonoEntrega"
                     />
                     <label for="email" class="">Contacto Emisor</label>
                   </div>
@@ -46,7 +46,7 @@
                       id="subject"
                       name="subject"
                       class="form-control"
-                      :value="post.direccion"
+                      :value="post.direccionRecojo"
                     />
                     <label for="subject" class="">Dirección Recojo</label>
                   </div>
@@ -67,7 +67,7 @@
                 </div>
               </div>
             </form>
-            <p class="h2-responsive  text-left my-3">Detalles Recepcíon</p>
+            <p class="h2-responsive  font-weight-bold text-left my-3">Detalles Recepcíon</p>
             <form name="pedido-form">
               <div class="row">
                 <div class="col-md-6">
@@ -77,6 +77,7 @@
                       id="name"
                       name="name"
                       class="form-control"
+                      :value="post.nombreReceptor"
                     />
                     <label for="name" class="">Nombres Receptor </label>
                   </div>
@@ -89,6 +90,7 @@
                       id="email"
                       name="email"
                       class="form-control"
+                      :value="post.telefonoRecojo"      
                     />
                     <label for="email" class="">Contacto Receptor</label>
                   </div>
@@ -102,6 +104,7 @@
                       id="subject"
                       name="subject"
                       class="form-control"
+                      :value="post.direccionRecojo"
                     />
                     <label for="subject" class="">Dirección Recepcion</label>
                   </div>
@@ -116,6 +119,7 @@
                       name="message"
                       rows="2"
                       class="form-control md-textarea"
+                      :value ="post.referenciaEntrega"
                     ></textarea>
                     <label for="message">Referencia</label>
                   </div>
@@ -126,7 +130,7 @@
             <div class="status"></div>
           </div>
           <div class="col-md-6 mb-md-0 mb-5">
-            <p class="h2-responsive  text-left my-3">Detalles Paquete</p>
+            <p class="h2-responsive font-weight-bold text-left my-3">Detalles Paquete</p>
             <form name="pedido-form" @submit.prevent="passes(submit)">
               <div class="row">
                 <div class="col-md-12">
@@ -199,6 +203,7 @@
                       id="name"
                       name="name"
                       class="form-control"
+                      :value="post.peso"
                     />
                     <label for="name" class="">Peso aproximado </label>
                   </div>
@@ -221,44 +226,25 @@
                     <label for="name" class="">Vehiculo recomendacion </label>
                   </div>
                 </div>
+                <div class="col-md-6">
+                <div class="md-form mb-0">
+                   <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      class="form-control"
+                      :value="post.costo"
+                    />
+                    <label for="name" class="">Costo </label>
+                </div>
+              </div>
               </div>
             </form>
-            <br /><br />
-            <div class="row content-coti">
-              <div class="col-md-12">
-                <div class="md-form mb-0">
-                  <button class="btn btn-success" @click="cambiar()">
-                    Cotizar
-                  </button>
-                </div>
-              </div>
-              <div class="cotizacion" v-show="cotizacion">
-                <div class="col-md-12">
-                  <label>
-                    Tiempo pedido:
-                  </label>
-                  <label>
-                    60 minutos
-                  </label>
-                  <label>
-                    -
-                  </label>
-                  <label>
-                    Costo:
-                  </label>
-
-                  <label>
-                    S/ 12
-                  </label>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
 
-        <div class="text-center text-md-right">
-          <button class="btn btn-primary btn-lg">Pedir</button>
-        </div>
+       
       </section>
     </div>
   </div>
@@ -266,24 +252,10 @@
 <script>
 export default {
   async asyncData({  $http }) {
-    const post = await $http.$get(`http://localhost:60185/api/usuario/1`);
+    const post = await $http.$get(`http://localhost:60185/api/pedido/1`);
     return { post };
-  },
-
-  data() {
-    return {
-      cotizacion: false,
-      
-    };
-  },
-  methods: {
-    cambiar() {
-      this.cotizacion = !this.cotizacion;
-    }
-
-    
   }
-  
+ 
 };
 </script>
 <style>
