@@ -252,7 +252,7 @@
 <script>
 export default {
   async asyncData({  $http }) {
-    const post = await $http.$get(`http://localhost:60185/api/pedido/1`);
+    const post = await $http.$get(`http://mooverapi.azurewebsites.net/api/pedido/1`);
     return { post };
   }
  

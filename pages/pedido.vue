@@ -266,7 +266,7 @@
 <script>
 export default {
   async asyncData({  $http }) {
-    const post = await $http.$get(`http://localhost:60185/api/usuario/1`);
+    const post = await $http.$get(`http://mooverapi.azurewebsites.net/api/usuario/1`);
     return { post };
   },
 

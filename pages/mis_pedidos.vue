@@ -37,8 +37,8 @@
                             <td>{{pedido.fechaentrega}}</td>
                             <td>{{pedido.estado}}</td>
                             <td>
-                                <a class ="link" v-show="pedido.estado== 'En camino'"><nuxt-link to="/estado_pedido"><font-awesome-icon :icon="['fas', 'eye']" class="fa-2x"/></nuxt-link></a>
-                                <a class ="link" v-show="pedido.estado!= 'En camino'"><nuxt-link to="/pedido_detalle"><font-awesome-icon :icon="['fas', 'eye']" class="fa-2x"/></nuxt-link></a>
+                                <nuxt-link id ="link" v-show="pedido.estado== 'En camino'" to="/estado_pedido"><font-awesome-icon :icon="['fas', 'eye']" class="fa-2x"/></nuxt-link>
+                                <nuxt-link id ="link" v-show="pedido.estado!= 'En camino'" to="/pedido_detalle"><font-awesome-icon :icon="['fas', 'eye']" class="fa-2x"/></nuxt-link>
 
                             </td>
                             
@@ -67,12 +67,13 @@
     methods:{
         getPedidos(){
 
-                 axios.get("http://localhost:60185/api/pedido")
+                 axios.get("http://mooverapi.azurewebsites.net/api/pedido")
                  .then( response => {
                      this.pedidos = response.data
                      console.log(response)
                  })
                  .catch( e =>console.log(e))
+                 
         }
     }
     
@@ -88,7 +89,7 @@
     color:white;
     font-size: medium;
 }
-link{
-    color:lightgreen
+#link{
+    color:#009975
 }
 </style>
