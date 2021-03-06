@@ -15,7 +15,7 @@
                 aria-describedby="codigoHelp"
                 placeholder="Número de pedido"
                 
-              />
+              >
               <small id="codigoHelp" class="form-text text-muted"
                 >Codigo se muestra en la app o en el correo enviado</small
               >
@@ -31,7 +31,7 @@
           </form>
         </div>
       </div>
-      <br />
+      <br>
       <div class="row center">
         <div class="col-lg-12 col-md-8">
           <button type="button" class="btn btn-success" @click="goToNuevo()">

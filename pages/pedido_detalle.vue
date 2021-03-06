@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <br />
+    <br>
     <div class="container">
       <section class="mb-4 contentNew">
         <h2 class="h1-responsive font-weight-bold text-center my-4">
@@ -20,7 +20,7 @@
                       name="name"
                       class="form-control"
                       :value="post.nombreEmisor"
-                    />
+                    >
                     <label for="name" class="">Nombre Emisor </label>
                   </div>
                 </div>
@@ -33,7 +33,7 @@
                       name="email"
                       class="form-control"
                       :value="post.telefonoEntrega"
-                    />
+                    >
                     <label for="email" class="">Contacto Emisor</label>
                   </div>
                 </div>
@@ -47,7 +47,7 @@
                       name="subject"
                       class="form-control"
                       :value="post.direccionRecojo"
-                    />
+                    >
                     <label for="subject" class="">Dirección Recojo</label>
                   </div>
                 </div>
@@ -78,7 +78,7 @@
                       name="name"
                       class="form-control"
                       :value="post.nombreReceptor"
-                    />
+                    >
                     <label for="name" class="">Nombres Receptor </label>
                   </div>
                 </div>
@@ -91,7 +91,7 @@
                       name="email"
                       class="form-control"
                       :value="post.telefonoRecojo"      
-                    />
+                    >
                     <label for="email" class="">Contacto Receptor</label>
                   </div>
                 </div>
@@ -105,7 +105,7 @@
                       name="subject"
                       class="form-control"
                       :value="post.direccionRecojo"
-                    />
+                    >
                     <label for="subject" class="">Dirección Recepcion</label>
                   </div>
                 </div>
@@ -140,7 +140,7 @@
                       type="radio"
                       name="flexRadioDefault"
                       id="flexRadioDefault1"
-                    />
+                    >
                     <label
                       class="form-control-check-label"
                       for="flexRadioDefault1"
@@ -155,7 +155,7 @@
                       type="radio"
                       name="flexRadioDefault"
                       id="flexRadioDefault1"
-                    />
+                    >
                     <label
                       class="form-control-check-label"
                       for="flexRadioDefault1"
@@ -169,7 +169,7 @@
                       type="radio"
                       name="flexRadioDefault"
                       id="flexRadioDefault1"
-                    />
+                    >
                     <label
                       class="form-control-check-label"
                       for="flexRadioDefault1"
@@ -204,7 +204,7 @@
                       name="name"
                       class="form-control"
                       :value="post.peso"
-                    />
+                    >
                     <label for="name" class="">Peso aproximado </label>
                   </div>
                 </div>
@@ -234,7 +234,7 @@
                       name="name"
                       class="form-control"
                       :value="post.costo"
-                    />
+                    >
                     <label for="name" class="">Costo </label>
                 </div>
               </div>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <br />
+    <br>
     <div class="container">
       <section class="mb-4 contentNew">
         <h2 class="h1-responsive font-weight-bold text-center my-4">
@@ -20,7 +20,7 @@
                       name="name"
                       class="form-control"
                       :value="post.razonSocial"
-                    />
+                    >
                     <label for="name" class="">Nombre Emisor </label>
                   </div>
                 </div>
@@ -33,7 +33,7 @@
                       name="email"
                       class="form-control"
                       :value="post.correo"
-                    />
+                    >
                     <label for="email" class="">Contacto Emisor</label>
                   </div>
                 </div>
@@ -47,7 +47,7 @@
                       name="subject"
                       class="form-control"
                       :value="post.direccion"
-                    />
+                    >
                     <label for="subject" class="">Dirección Recojo</label>
                   </div>
                 </div>
@@ -77,7 +77,7 @@
                       id="name"
                       name="name"
                       class="form-control"
-                    />
+                    >
                     <label for="name" class="">Nombres Receptor </label>
                   </div>
                 </div>
@@ -89,7 +89,7 @@
                       id="email"
                       name="email"
                       class="form-control"
-                    />
+                    >
                     <label for="email" class="">Contacto Receptor</label>
                   </div>
                 </div>
@@ -102,7 +102,7 @@
                       id="subject"
                       name="subject"
                       class="form-control"
-                    />
+                    >
                     <label for="subject" class="">Dirección Recepcion</label>
                   </div>
                 </div>
@@ -136,7 +136,7 @@
                       type="radio"
                       name="flexRadioDefault"
                       id="flexRadioDefault1"
-                    />
+                    >
                     <label
                       class="form-control-check-label"
                       for="flexRadioDefault1"
@@ -151,7 +151,7 @@
                       type="radio"
                       name="flexRadioDefault"
                       id="flexRadioDefault1"
-                    />
+                    >
                     <label
                       class="form-control-check-label"
                       for="flexRadioDefault1"
@@ -165,7 +165,7 @@
                       type="radio"
                       name="flexRadioDefault"
                       id="flexRadioDefault1"
-                    />
+                    >
                     <label
                       class="form-control-check-label"
                       for="flexRadioDefault1"
@@ -199,7 +199,7 @@
                       id="name"
                       name="name"
                       class="form-control"
-                    />
+                    >
                     <label for="name" class="">Peso aproximado </label>
                   </div>
                 </div>
@@ -223,7 +223,7 @@
                 </div>
               </div>
             </form>
-            <br /><br />
+            <br><br>
             <div class="row content-coti">
               <div class="col-md-12">
                 <div class="md-form mb-0">

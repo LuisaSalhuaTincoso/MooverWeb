@@ -34,7 +34,7 @@
     </nav>
     <div class="container contents-inicio">
       <h3>Inicio de Sesión</h3>
-      <br />
+      <br>
       <form >
         <div class="form-group">
           <input
@@ -42,7 +42,7 @@
             v-model="email"
             class="form-control"
             placeholder="Ingresa correo"
-          />
+          >
         </div>
         <div class="form-group">
           <input
@@ -50,7 +50,7 @@
             v-model="password"
             class="form-control"
             placeholder="Ingresa contraseña"
-          />
+          >
         </div>
        
       </form>

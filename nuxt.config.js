@@ -58,5 +58,10 @@ export default {
     babel: {
       compact: true
     }
+  },
+  generate: {
+    minify: {
+      collapseWhitespace: false
+    }
   }
 }

@@ -38,11 +38,11 @@
           facil
         </p>
         <p class="us-inicio">Donque quieras, cuando quieras</p>
-        <br />
-        <br />
+        <br>
+        <br>
         <button type="button" class="btn btn-info" @click="goToInicio()">Haz una entrega ya!</button>
-        <br />
-        <br />
+        <br>
+        <br>
         <button type="button" class="btn btn-success" @click="goToRegistro()">Registrate</button>
       </div>
     </div>
